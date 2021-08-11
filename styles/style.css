@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;900&display=swap');
+:root {
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    display: block;
+}
+p{
+    font-weight: 100;
+}
+
+h4 {
+    font-weight: 500;
+}
+
+h1 {
+    font-weight: 900;
+}
