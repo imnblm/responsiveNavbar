@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 *{
     
     margin: 0;
@@ -21,6 +21,11 @@ body {
     background: #11101d;
     padding: 6px 14px;
     height: 100%;
+    width: 78px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active {
     width: 240px;
 }
 
@@ -30,6 +35,12 @@ body {
     height: 50px;
     width: 100%;
     align-items: enter;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.active .logo-content .logo {
+    opacity:1;
 }
 
 .logo-content .logo i{
@@ -39,21 +50,108 @@ body {
 
 .logo-content .logo .logo-name {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 100;
+}
+
+.logo-content {
+    margin-top: 6px;
 }
 
 .sidebar #btn {
     position: absolute;
     color: #fff;
-    left: 90%;
-    top: 6px;
+    left: 50%;
+    top: 0px;
     font-size: 20px;
-    height
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    
+}
+
+.sidebar.active #btn {
+    left: 90%;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+    font-weight: 100;
+}
+
+.sidebar ul li {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin : 0 5px;
+    list-style: none;
+    line-height: 50px;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 122px;
+    top: 0;
+    transform: translateY(-50%);
+    border-radius: 12px;
+    height: 35px;
+    width: 122px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    line-height: 35px;
+    text-align: center;
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+
+.sidebar.active ul li .tooltip {
+    
+}
+
+.sidebar ul li:hover .tooltip {
+    transition: all 0.5s ease;
+    top: 50%;
+    opacity: 1;
+
+}
+
+.sidebar ul li a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    border-radius: 12px;
+
+}
+
+.sidebar ul li a:hover {
+    background-color: #fff;
+    color: #11101d;
+}
+
+.sidebar ul li a i {
+    height: 50px;
+    min-width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.main {
+    position: absolute;
+    height: 100%;
+    width: calc(100% -240px);
+    left: 240px;
 }
 
 section {
     display: block;
 }
+
 p{
     font-weight: 100;
 }
